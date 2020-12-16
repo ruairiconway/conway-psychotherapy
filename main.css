@@ -1,0 +1,96 @@
+/* ==== Typestyles ==== */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap');
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+}
+
+header h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+}
+
+header p {
+  font-family: 'Poppins', sans-serif;
+  color: #FFF
+}
+
+main h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #6B6198;
+}
+
+main p {
+  font-family: 'Open Sans', sans-serif;
+  color: #000
+}
+
+footer p {
+  font-family: 'Poppins', sans-serif;
+  color: #FFF
+}
+
+
+/* ==== SVGs ==== */
+
+.content-button svg {
+  stroke: #6B6198;
+}
+
+.social-button svg {
+  stroke: #FFF;
+}
+
+
+/* ==== Structure ==== */
+
+.bg-image {
+  background-image: 
+    linear-gradient(
+      #6B6198D9, 
+      #6B6198D9
+    ),
+    url("./assets/sand.jpg");
+}
+
+#portrait {
+  max-width: 100px;
+}
+
+
+/* ==== Footer ==== */
+
+.social-button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.social-button:focus {
+  outline: 2px dashed #17171D;
+}
+
+
+/* ==== Functionality ==== */
+
+.hidden {
+  display: none;
+}
+
+
+/* ==== Accessibility ==== */
+
+.sr-only {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
