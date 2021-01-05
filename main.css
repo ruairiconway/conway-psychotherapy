@@ -44,9 +44,12 @@ main p {
 }
 
 .content-p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   word-spacing: 0.2em;
+  letter-spacing: 0.01em;
   line-height: 1.6em;
+  margin-bottom: 40px;
+  padding: 0 5%;
 }
 
 .contact-container p {
@@ -161,11 +164,6 @@ header {
 .content-button svg {
   margin-left: auto;
   min-width: 24px;
-}
-
-.content-p {
-  margin-bottom: 40px;
-  padding: 0 5%;
 }
 
 
