@@ -32,11 +32,21 @@ header p {
 main h3 {
   font-family: 'Poppins', sans-serif;
   color: #6B6198;
+  font-size: 1.3em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-align: left;
 }
 
 main p {
   font-family: 'Open Sans', sans-serif;
-  color: #000
+  color: #000;
+}
+
+.content-p {
+  font-size: 0.9em;
+  word-spacing: 0.2em;
+  line-height: 1.6em;
 }
 
 .contact-container p {
@@ -87,10 +97,6 @@ html {
     url("./assets/sand.jpg");
 }
 
-#portrait {
-  max-width: 100px;
-}
-
 
 /* ==== Header ==== */
 
@@ -121,19 +127,21 @@ header {
   flex-flow: row nowrap;
   align-items: center;
 
-  margin: 0 5%;
+  margin: 75px 5%;
 }
 
 .contact-portrait {
-  height: 200px;
+  max-width: 110px;
+  height: auto;
 }
 
 .contact-info {
-
+  margin: 10px 0 10px 10px;
 }
 
 .content-container {
   background-color: #FFF;
+  padding: 50px 0;
 }
 
 .content-button {
@@ -142,12 +150,22 @@ header {
   align-items: center;
 
   width: 100%;
+  height: 100px;
+  padding: 0 5%;
   font-style: normal;
   font-weight: normal;
+  border: none;
+  background-color: #FFF;
 }
 
 .content-button svg {
   margin-left: auto;
+  min-width: 24px;
+}
+
+.content-p {
+  margin-bottom: 40px;
+  padding: 0 5%;
 }
 
 
@@ -161,7 +179,7 @@ footer {
 
   text-align: center;
   height: 200px;
-  margin: 25px 0px;
+  padding: 25px 0px;
 }
 
 .social-nav {
