@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site Title</title>
+    <title>Conway Psychotherapy</title>
     <!-- css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
     <link href="main.css" rel="stylesheet" type="text/css">
@@ -15,72 +15,81 @@
 <body class="bg-image">
 
     <header>
-        <div>
+        <div class="header-title">
             <h1>Conway Psychotherapy</h1>
         </div>
-        <div>
+        <div class="header-subtitle">
             <h2>“Only the present moment is real”</h2>
             <h2>- Thich Nhat Hanh</h2>
         </div>
-        <div>
+        <div class="header-subtitle">
             <h2>Supporting clients in West Cork</h2>
             <h2>Accredited Member IACP</h2>
         </div>
-        <div>
-            <img id="portrait" src='./assets/portrait.jpg' alt="Picture of Teresa Conway">
-            <p>Teresa Conway</p>
-            <p>(087) 782-4431</p>
-            <p>conway.tvm@gmail.com</p>
-            <p>9/10 Howard Court, Weir Street, Bandon, Co. Cork, P72 KX50</p>
-        </div>
     </header>
-
+    
+    
     <main>
-        <div id="content-psycho">
-            <button class="content-button">
-                <h3>What is psychotherapy?</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                    <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                </svg>
-                <span class="sr-only">Read more on "What is psychotherapy?"</span>
-            </button>
-            <div class="content-p hidden">
-                <p>Counselling involves exploring effective ways to remedy more immediate issues that may be effecting us. Working together in a supportive environment, counselling provides the client with the tools to find resolution.  Collaboratively deciding on strategies that can be used to overcome anxiety, stress, loneliness etc.  Counselling helps us to recover a feeling of power/control over our emotions and well being leading to more effective self leadership.</p>
-                <p>Psychotherapy is taking a deeper look at how the past may be influencing and possibly restricting present day living.  Childhood or adult experiences can have a lasting effects on us, resulting in certain behaviours or ways of being which may not be helpful to us as adults.   The client becomes actively involved in their own healing process, facilitating effective change and healthier ways of being.</p>
+        <section class="contact-container">
+            <div class="contact-portrait">
+                <img id="portrait" src='./assets/portrait.jpg' alt="Picture of Teresa Conway">
             </div>
-        </div>
-        <div id="content-background">
-            <button class="content-button">
-                <h3>Background</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                    <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                </svg>
-                <span class="sr-only">Read more on "Background"</span>
-            </button>
-            <div class="content-p hidden">
-                <p>My life experience has been the influence or driving force that led me to become a psychotherapist.  I have always had a deep need to understand myself and the people around me. My interest in behaviour and its effects deepened through my personal journey in psychotherapy.</p>
-                <p>I recently qualified with a  BA (Hons) Degree in Counselling and Psychotherapy from CIT. As an Accredited member of the IACP (Irish Association Of Counsellors and Psychotherapists), I practice under a strict Code of Ethics.</p>
-                <p>An important part of my work is volunteering with a local Cancer organisation as a Counsellor.  I am working towards setting up my own private practice in Bandon.  I am constantly updating my training with Workshops and Seminars and will continue to do this.</p>
-                <p>Other relevant qualifications which I feel compliment/enhance my practice are: Diploma in “Svastha” Yoga Teaching  (Singapore). Reiki: Level 1 and 2  (Singapore).</p>
+            <div class="contact-info">
+                <p>Teresa Conway</p>
+                <p>(087) 782-4431</p>
+                <p>conway.tvm@gmail.com</p>
+                <p>9/10 Howard Court</p>
+                <p>Weir Street Bandon</p>
+                <p>Co. Cork P72 KX50</p>
             </div>
-        </div>
-        <div id="content-approach">
-            <button class="content-button">
-                <h3>Approach</h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                    <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
-                </svg>
-                <span class="sr-only">Read more on "Approach"</span>
-            </button>
-            <div class="content-p hidden">
-                <p>My aim is to provide a safe, secure, confidential, supportive space for the client to exploring what is not working for them and why. Through awareness, change and healing, the client becomes freer to choose behaviours that lead to better personal outcomes and create lasting changes. I respond to each client as a unique individual with a unique set of issues.  If the client does not feel safe in the space the therapy will not be effective.</p>
-                <p>As an Integrative Humanistic Therapist, I draw on a number of methodologies in my work with clients, including Gestalt, Transactional Analysis, Person Centred, Cognitive Behavioural Therapy (CBT) and Internal Family Systems. I  believe attachment can be a very helpful lens through which to gain understanding of ourselves.  Mindfulness is an important tool for developing self awareness and promoting regulation.</p>
-                <p>Therapy facilitates positive change, improves people’s lives and creates space for personal growth and development leading to greater fulfillment.</p>
+        </section>
+        <section class="content-container">     
+            <div id="content-psycho">
+                <button class="content-button">
+                    <h3>What is psychotherapy?</h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                        <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                    </svg>
+                    <span class="sr-only">Read more on "What is psychotherapy?"</span>
+                </button>
+                <div class="content-p hidden">
+                    <p>Counselling involves exploring effective ways to remedy more immediate issues that may be effecting us. Working together in a supportive environment, counselling provides the client with the tools to find resolution.  Collaboratively deciding on strategies that can be used to overcome anxiety, stress, loneliness etc.  Counselling helps us to recover a feeling of power/control over our emotions and well being leading to more effective self leadership.</p>
+                    <p>Psychotherapy is taking a deeper look at how the past may be influencing and possibly restricting present day living.  Childhood or adult experiences can have a lasting effects on us, resulting in certain behaviours or ways of being which may not be helpful to us as adults.   The client becomes actively involved in their own healing process, facilitating effective change and healthier ways of being.</p>
+                </div>
             </div>
-        </div>
+            <div id="content-background">
+                <button class="content-button">
+                    <h3>Background</h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                        <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                    </svg>
+                    <span class="sr-only">Read more on "Background"</span>
+                </button>
+                <div class="content-p hidden">
+                    <p>My life experience has been the influence or driving force that led me to become a psychotherapist.  I have always had a deep need to understand myself and the people around me. My interest in behaviour and its effects deepened through my personal journey in psychotherapy.</p>
+                    <p>I recently qualified with a  BA (Hons) Degree in Counselling and Psychotherapy from CIT. As an Accredited member of the IACP (Irish Association Of Counsellors and Psychotherapists), I practice under a strict Code of Ethics.</p>
+                    <p>An important part of my work is volunteering with a local Cancer organisation as a Counsellor.  I am working towards setting up my own private practice in Bandon.  I am constantly updating my training with Workshops and Seminars and will continue to do this.</p>
+                    <p>Other relevant qualifications which I feel compliment/enhance my practice are: Diploma in “Svastha” Yoga Teaching  (Singapore). Reiki: Level 1 and 2  (Singapore).</p>
+                </div>
+            </div>
+            <div id="content-approach">
+                <button class="content-button">
+                    <h3>Approach</h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                        <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
+                    </svg>
+                    <span class="sr-only">Read more on "Approach"</span>
+                </button>
+                <div class="content-p hidden">
+                    <p>My aim is to provide a safe, secure, confidential, supportive space for the client to exploring what is not working for them and why. Through awareness, change and healing, the client becomes freer to choose behaviours that lead to better personal outcomes and create lasting changes. I respond to each client as a unique individual with a unique set of issues.  If the client does not feel safe in the space the therapy will not be effective.</p>
+                    <p>As an Integrative Humanistic Therapist, I draw on a number of methodologies in my work with clients, including Gestalt, Transactional Analysis, Person Centred, Cognitive Behavioural Therapy (CBT) and Internal Family Systems. I  believe attachment can be a very helpful lens through which to gain understanding of ourselves.  Mindfulness is an important tool for developing self awareness and promoting regulation.</p>
+                    <p>Therapy facilitates positive change, improves people’s lives and creates space for personal growth and development leading to greater fulfillment.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -89,31 +98,40 @@
             <p>BA (Hons) Counselling and Psychotherapy, CIT</p>
             <p>Accredited Member, IACP</p>
         </div>
-        <div>
+
+<!-- REMOVE BUTTON TAGS AND JUST USE <A>-->
+
+        <div class="social-nav">
             <!-- Facebook -->
-            <button class="social-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="sr-only">Click to view Facebook page</span>
-            </button>
+            <a href="https://www.facebook.com/CPsycotherapy" target="_blank">
+                <button class="social-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="sr-only">Click to view Facebook page</span>
+                </button>
+            </a>
             <!-- Email -->
-            <button class="social-button">    
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 6L12 13L2 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="sr-only">Click to open Email link</span>
-            </button>
+            <a href="mailto:conway.tvm@gmail.com" class="social-link"> 
+                <button class="social-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="sr-only">Click to open Email link</span>
+                </button>
+            </a>
             <!-- LinkedIn -->
-            <button class="social-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 9H2V21H6V9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="sr-only">Click to view LinkedIn page</span>
-            </button>
+            <a href="https://www.linkedin.com/in/teresa-conway-bab2632a" target="_blank">
+                <button class="social-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 9H2V21H6V9Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="sr-only">Click to view LinkedIn page</span>
+                </button>
+            </a>
         </div>
     </footer>
 
