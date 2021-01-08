@@ -13,58 +13,68 @@ const quotes = [
         attr: `- Bessel Van der Kolk`
     },
     {
-        line: `"Who looks outside dreams, who looks inside awakes."`,
+        line: `"Who looks outside dreams,<br />who looks inside awakes."`,
         attr: `- Carl Yung`
     }
 ]
 
-let count = 0
+let quoteCount = 0
 
-function handleQuote(quotes) {
-    let limit = quotes.length - 1
-    if (count !== limit) {
-        count += 1
-        return quotes[count]
+function updateQuote(array) {
+    // quoteCount incremented and used as index for quotes[]
+    let countLimit = array.length - 1
+    if (quoteCount !== countLimit) {
+        quoteCount += 1
     } else {
-        count = 0
-        return quotes[count]
+        quoteCount = 0
     }
+    console.log(quoteCount)
+    $(`.js-quote-line`).html(`${array[quoteCount].line}`)
+    $(`.js-quote-attr`).html(`${array[quoteCount].attr}`)
 }
 
-function cycleQuote() {
+function handleQuote(array) {
+    // Looped, quote fades out for text change, then fades in again
     setInterval(() => {
-        let currentQuote = handleQuote(quotes)
-        $(`.js-quote-line`).html(`${currentQuote.line}`)
-        $(`.js-quote-attr`).html(`${currentQuote.attr}`)
-    }, 3000);
+        $(`.js-quote`)
+            .fadeOut(750, function() {updateQuote(array)} )
+            .fadeIn(750)
+    }, 4500);
 }
 
 
 // ==== CONTENT ACCORDIAN
 
 function psychoButton() {
+    //toggles content on click
     $('#content-psycho > .content-button').on("click", () => {
         $('#content-psycho > .content-p').toggleClass('hidden', 1000, "easeOutSine");
     })
 }
 
 function backgroundButton() {
+    //toggles content on click
     $('#content-background > .content-button').on("click", () => {
         $('#content-background > .content-p').toggleClass('hidden');
     })
 }
 
 function approachButton() {
+    //toggles content on click
     $('#content-approach > .content-button').on("click", () => {
         $('#content-approach > .content-p').toggleClass('hidden');
     })
 }
 
 function watchContentButtons() {
+    //sets up event listeners for content buttons
     psychoButton()
     backgroundButton()
     approachButton()
 }
 
-$(cycleQuote)
+
+// ==== ON LOAD
+
+$(handleQuote(quotes))
 $(watchContentButtons)
