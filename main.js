@@ -28,7 +28,6 @@ function updateQuote(array) {
     } else {
         quoteCount = 0
     }
-    console.log(quoteCount)
     $(`.js-quote-line`).html(`${array[quoteCount].line}`)
     $(`.js-quote-attr`).html(`${array[quoteCount].attr}`)
 }
@@ -39,30 +38,37 @@ function handleQuote(array) {
         $(`.js-quote`)
             .fadeOut(750, function() {updateQuote(array)} )
             .fadeIn(750)
-    }, 4500);
+    }, 4500)
 }
 
 
 // ==== CONTENT ACCORDIAN
 
+function rotatePlus() {
+
+}
+
 function psychoButton() {
     //toggles content on click
     $('#content-psycho > .content-button').on("click", () => {
-        $('#content-psycho > .content-p').toggleClass('hidden', 1000, "easeOutSine");
+        $('#content-psycho > .content-p').toggleClass('hidden')
+        $('#psycho-icon').toggleClass('rotate-icon')
     })
 }
 
 function backgroundButton() {
     //toggles content on click
     $('#content-background > .content-button').on("click", () => {
-        $('#content-background > .content-p').toggleClass('hidden');
+        $('#content-background > .content-p').toggleClass('hidden')
+        $('#background-icon').toggleClass('rotate-icon')
     })
 }
 
 function approachButton() {
     //toggles content on click
     $('#content-approach > .content-button').on("click", () => {
-        $('#content-approach > .content-p').toggleClass('hidden');
+        $('#content-approach > .content-p').toggleClass('hidden')
+        $('#approach-icon').toggleClass('rotate-icon')
     })
 }
 

@@ -72,8 +72,21 @@ footer p {
 
 /* ==== SVGs ==== */
 
-.content-button svg {
+.content-icon {
   stroke: #6B6198;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.rotate-icon {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
 }
 
 .social-button svg {
@@ -174,6 +187,10 @@ header {
   min-width: 24px;
 }
 
+.content-button:focus {
+  outline: 2px solid #6B6198;
+}
+
 
 /* ==== Footer ==== */
 
@@ -209,7 +226,7 @@ footer {
 }
 
 .social-button:focus {
-  outline: 1px dashed #FFF;
+  outline: 2px solid #FFF;
 }
 
 
