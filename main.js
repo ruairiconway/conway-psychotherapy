@@ -1,6 +1,25 @@
 'use strict'
 
 
+// ==== ACCESSIBILITY
+
+function handleFirstTab(e) {
+    if (e.keyCode === 9) {
+        $('body').addClass('user-is-tabbing')
+        window.removeEventListener('keydown', handleFirstTab)
+        window.addEventListener('mousedown', handleMouseDownOnce)
+    }
+}
+  
+function handleMouseDownOnce() {
+    $('body').removeClass('user-is-tabbing')
+    window.removeEventListener('mousedown', handleMouseDownOnce)
+    window.addEventListener('keydown', handleFirstTab)
+}
+
+window.addEventListener('keydown', handleFirstTab)
+
+
 // ==== QUOTE ROTATION
 
 const quotes = [
@@ -44,31 +63,30 @@ function handleQuote(array) {
 
 // ==== CONTENT ACCORDIAN
 
-function rotatePlus() {
-
-}
-
 function psychoButton() {
     //toggles content on click
     $('#content-psycho > .content-button').on("click", () => {
-        $('#content-psycho > .content-p').toggleClass('hidden')
         $('#psycho-icon').toggleClass('rotate-icon')
+        $('#content-psycho > .content-button').toggleClass('active')
+        $('#content-psycho > .content-p').toggleClass('hidden')
     })
 }
 
 function backgroundButton() {
     //toggles content on click
     $('#content-background > .content-button').on("click", () => {
-        $('#content-background > .content-p').toggleClass('hidden')
         $('#background-icon').toggleClass('rotate-icon')
+        $('#content-background > .content-button').toggleClass('active')
+        $('#content-background > .content-p').toggleClass('hidden')
     })
 }
 
 function approachButton() {
     //toggles content on click
     $('#content-approach > .content-button').on("click", () => {
-        $('#content-approach > .content-p').toggleClass('hidden')
         $('#approach-icon').toggleClass('rotate-icon')
+        $('#content-approach > .content-button').toggleClass('active')
+        $('#content-approach > .content-p').toggleClass('hidden')
     })
 }
 
@@ -79,8 +97,12 @@ function watchContentButtons() {
     approachButton()
 }
 
+function handlePageFadeOnLoad() {
+    $('body').css('display', 'none').delay(250).fadeIn(750, "swing");
+}
 
 // ==== ON LOAD
 
+$(handlePageFadeOnLoad)
 $(handleQuote(quotes))
 $(watchContentButtons)

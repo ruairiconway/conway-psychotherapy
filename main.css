@@ -100,6 +100,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
+
 html {
   height: -webkit-fill-available;
 }
@@ -180,6 +181,8 @@ header {
   font-weight: normal;
   border: none;
   background-color: #FFF;
+
+  transition: 0.4s;
 }
 
 .content-button svg {
@@ -187,8 +190,12 @@ header {
   min-width: 24px;
 }
 
-.content-button:focus {
-  outline: 2px solid #6B6198;
+.content-button:hover {
+  background-color: #6B619833;
+}
+
+.active {
+  background-color: #6B61981A;
 }
 
 
@@ -223,10 +230,13 @@ footer {
   border: none;
   background: none;
   cursor: pointer;
+
+  transition: 0.4s;
 }
 
-.social-button:focus {
-  outline: 2px solid #FFF;
+.social-button:hover {
+  background-color: #FFFFFF33;
+  border-radius: 3px;
 }
 
 
@@ -244,4 +254,11 @@ footer {
   width: 1px;
   overflow: hidden;
   position: absolute;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
 }
