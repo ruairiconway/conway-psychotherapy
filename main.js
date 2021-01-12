@@ -23,15 +23,15 @@ $(window).on('keydown', handleFirstTab)
 const quotes = [
     {
         line: `"Only the present moment is real."`,
-        attr: `- Thich Nhat Hanh`
+        attr: `Thich Nhat Hanh`
     },
     {
         line: `"The road to recovery is the road to life."`,
-        attr: `- Bessel Van der Kolk`
+        attr: `Bessel Van der Kolk`
     },
     {
         line: `"Who looks outside dreams,<br />who looks inside awakes."`,
-        attr: `- Carl Yung`
+        attr: `Carl Yung`
     }
 ]
 
@@ -46,7 +46,7 @@ function updateQuote(array) {
         quoteCount = 0
     }
     $(`.js-quote-line`).html(`${array[quoteCount].line}`)
-    $(`.js-quote-attr`).html(`${array[quoteCount].attr}`)
+    $(`.js-quote-attr`).html(`- ${array[quoteCount].attr}`)
 }
 
 function handleQuote(array) {
