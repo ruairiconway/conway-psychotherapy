@@ -6,18 +6,16 @@
 function handleFirstTab(e) {
     if (e.keyCode === 9) {
         $('body').addClass('user-is-tabbing')
-        window.removeEventListener('keydown', handleFirstTab)
-        window.addEventListener('mousedown', handleMouseDownOnce)
+        $(window).off('keydown', handleFirstTab).on('mousedown', handleMouseDownOnce)
     }
 }
   
 function handleMouseDownOnce() {
     $('body').removeClass('user-is-tabbing')
-    window.removeEventListener('mousedown', handleMouseDownOnce)
-    window.addEventListener('keydown', handleFirstTab)
+    $(window).off('mousedown', handleMouseDownOnce).on('keydown', handleFirstTab)
 }
 
-window.addEventListener('keydown', handleFirstTab)
+$(window).on('keydown', handleFirstTab)
 
 
 // ==== QUOTE ROTATION
