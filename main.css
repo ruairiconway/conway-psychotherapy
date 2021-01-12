@@ -190,10 +190,6 @@ header {
   min-width: 24px;
 }
 
-.content-button:hover {
-  background-color: #6B619833;
-}
-
 .active {
   background-color: #6B61981A;
 }
@@ -234,11 +230,6 @@ footer {
   transition: 0.4s;
 }
 
-.social-button:hover {
-  background-color: #FFFFFF33;
-  border-radius: 3px;
-}
-
 
 /* ==== Functionality ==== */
 
@@ -261,4 +252,20 @@ body:not(.user-is-tabbing) input:focus,
 body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
   outline: none;
+}
+
+
+/* ==== Media Queries ==== */
+
+@media screen and (min-width: 769px) {
+  
+  .content-button:hover {
+    background-color: #6B619833;
+  }
+
+  .social-button:hover {
+    background-color: #FFFFFF33;
+    border-radius: 3px;
+  }
+
 }
