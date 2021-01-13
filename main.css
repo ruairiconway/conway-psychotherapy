@@ -61,6 +61,10 @@ main p {
   line-height: 26px;
 }
 
+.contact-container a {
+  text-decoration: none;
+}
+
 footer p {
   font-family: 'Poppins', sans-serif;
   color: #FFF;
@@ -105,15 +109,15 @@ html {
   height: -webkit-fill-available;
 }
 
-.bg-image {
+.bg-video {
   position: fixed;
   min-height: 100vh;
-  width: 100%;
+  height: 100%;
   opacity: 0.5;
   z-index: -2;
 }
 
-.img-overlay {
+.bg-overlay {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -156,7 +160,7 @@ header {
 }
 
 .contact-portrait {
-  max-width: 110px;
+  max-width: 125px;
   height: auto;
 }
 
@@ -167,6 +171,7 @@ header {
 .content-container {
   background-color: #FFF;
   padding: 50px 0;
+  width: 100%;
 }
 
 .content-button {
@@ -256,7 +261,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
 
 /* ==== Media Queries ==== */
-
+/* tablet and up */
 @media screen and (min-width: 769px) {
   
   .content-button:hover {
@@ -266,6 +271,22 @@ body:not(.user-is-tabbing) textarea:focus {
   .social-button:hover {
     background-color: #FFFFFF33;
     border-radius: 3px;
+  }
+
+  .content-p {
+    font-size: 0.9em;
+  }
+
+  header h2 {
+    font-size: 1em;
+  }
+
+}
+/* laptop and up */
+@media screen and (min-width: 1015px) {
+  
+  main {
+    display: flex;
   }
 
 }
