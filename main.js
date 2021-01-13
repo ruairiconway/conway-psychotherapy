@@ -66,7 +66,6 @@ function psychoButton() {
     $('#content-psycho > .content-button').on("click", () => {
         $('#psycho-icon').toggleClass('rotate-icon')
         $('#content-psycho > .content-button').toggleClass('active')
-        // $('#content-psycho > .content-p').toggleClass('hidden')
         $('#content-psycho > .content-p').slideToggle(750)
     })
 }
@@ -76,7 +75,6 @@ function backgroundButton() {
     $('#content-background > .content-button').on("click", () => {
         $('#background-icon').toggleClass('rotate-icon')
         $('#content-background > .content-button').toggleClass('active')
-        // $('#content-background > .content-p').toggleClass('hidden')
         $('#content-background > .content-p').slideToggle(750)
     })
 }
@@ -86,7 +84,6 @@ function approachButton() {
     $('#content-approach > .content-button').on("click", () => {
         $('#approach-icon').toggleClass('rotate-icon')
         $('#content-approach > .content-button').toggleClass('active')
-        // $('#content-background > .content-p').toggleClass('hidden')
         $('#content-approach > .content-p').slideToggle(750)
     })
 }
