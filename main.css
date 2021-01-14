@@ -12,7 +12,6 @@ header h1 {
   font-size: 1.5em;
   font-weight: 300;
   letter-spacing: 0.2em;
-  
 }
 
 header h2 {
@@ -31,7 +30,7 @@ header p {
 
 main h3 {
   font-family: 'Poppins', sans-serif;
-  color: #6B6198;
+  color: #425332;
   font-size: 1.3em;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -77,7 +76,7 @@ footer p {
 /* ==== SVGs ==== */
 
 .content-icon {
-  stroke: #6B6198;
+  stroke: #425332;
   -webkit-transition: all 0.75s ease;
   -moz-transition: all 0.75s ease;
   -ms-transition: all 0.75s ease;
@@ -100,19 +99,21 @@ footer p {
 
 /* ==== Structure ==== */
 
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
 
-html {
-  height: -webkit-fill-available;
-}
 
-.bg-video {
+#bg-video {
   position: fixed;
-  min-height: 100vh;
-  height: 100%;
+  width: 100%;
+  height: auto;
   opacity: 0.5;
   z-index: -2;
 }
@@ -121,9 +122,9 @@ html {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  opacity: 0.75;
+  opacity: 0.8;
   z-index: -1;
-  background: #6B6198;
+  background: #425332;
 }
 
 
@@ -138,14 +139,23 @@ header {
 }
 
 .header-title {
-  flex: 4;
-
   display: flex;
   align-items: center;
+  
+  flex: 4;
 }
 
 .header-subtitle {
+  margin-bottom: 25px;
+  
   flex: 1;
+}
+
+#scroll-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  margin: -12px;
 }
 
 
@@ -154,6 +164,7 @@ header {
 .contact-container {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
 
   margin: 75px 5%;
@@ -162,6 +173,10 @@ header {
 .contact-portrait {
   max-width: 125px;
   height: auto;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
+  box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 }
 
 .contact-info {
@@ -172,6 +187,10 @@ header {
   background-color: #FFF;
   padding: 50px 0;
   width: 100%;
+  border-radius: 3px 0 0 3px;
+
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
+  box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 }
 
 .content-button {
@@ -196,7 +215,7 @@ header {
 }
 
 .active {
-  background-color: #6B61981A;
+  background-color: #4253321A;
 }
 
 
@@ -261,11 +280,12 @@ body:not(.user-is-tabbing) textarea:focus {
 
 
 /* ==== Media Queries ==== */
+
 /* tablet and up */
 @media screen and (min-width: 769px) {
   
   .content-button:hover {
-    background-color: #6B619833;
+    background-color: #42533233;
   }
 
   .social-button:hover {
@@ -281,12 +301,60 @@ body:not(.user-is-tabbing) textarea:focus {
     font-size: 1em;
   }
 
+  .contact-container {
+    align-self: start;
+  }
+
 }
+
+/* mobile + tablet */
+@media screen and (max-width: 1015px) {
+  #bg-video {
+    display: none;
+  }
+  body {
+    background: url('assets/waterfall-static.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
 /* laptop and up */
 @media screen and (min-width: 1015px) {
   
   main {
     display: flex;
+    background-color: #FFF;
+    -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
   }
 
+  .content-container {
+    -webkit-box-shadow: none; 
+    box-shadow: none
+  }
+
+  .contact-info {
+    margin: 10px 0 10px 20px;
+  }
+
+  .contact-info p {
+    color: #425332;
+  }
+
+}
+
+/* Video Formatting */
+@media (min-aspect-ratio: 16/9) {
+  #bg-video {
+      width:100%;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #bg-video { 
+      width:auto;
+      height: 100%;
+  }
 }
