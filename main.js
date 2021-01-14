@@ -4,6 +4,7 @@
 // ==== ACCESSIBILITY
 
 function handleFirstTab(e) {
+    // adds class .user-is-tabbing to body if tab key hit
     if (e.keyCode === 9) {
         $('body').addClass('user-is-tabbing')
         $(window).off('keydown', handleFirstTab).on('mousedown', handleMouseDownOnce)
@@ -11,26 +12,30 @@ function handleFirstTab(e) {
 }
   
 function handleMouseDownOnce() {
+    // removes class .user-is-tabbing from body on screen click
     $('body').removeClass('user-is-tabbing')
     $(window).off('mousedown', handleMouseDownOnce).on('keydown', handleFirstTab)
 }
 
+// calls handleFirstTab() on keydown
 $(window).on('keydown', handleFirstTab)
 
 
 // ==== DESKTOP VIDEO
 
-function displayDesktopVideo() {
-    const videoHtml = `
+function generateVideoHtml() {
+    // returns video html
+    return `
     <video autoplay muted loop poster="assets/waterfall-static.png" id="bg-video">
         <source src="assets/waterfall.mp4" type="video/mp4">
     </video>`
-    $('body').prepend(videoHtml)
 }
 
-function handleDesktopVideoOnLoad() {
+function handleVideoOnLoad() {
+    // if screen is desktop sized, generate video HTML
     if ($(window).width() > 1015) {
-        displayDesktopVideo()
+        const videoHtml = generateVideoHtml()
+        $('body').prepend(videoHtml)
     }
 }
 
@@ -79,6 +84,7 @@ function handleQuote(array) {
 // ==== SCROLL ARROW
 
 function handleAnchorButton() {
+    // controls smooth scroll to main content
     $('#scroll-arrow').on('click', () => {
         $('html, body').animate({
             scrollTop: $('#main').top
@@ -90,7 +96,7 @@ function handleAnchorButton() {
 // ==== CONTENT ACCORDIAN
 
 function handlePsychoButton() {
-    //toggles content on click
+    // toggles content on click
     $('#content-psycho > .content-button').on("click", () => {
         $('#psycho-icon').toggleClass('rotate-icon')
         $('#content-psycho > .content-button').toggleClass('active')
@@ -120,7 +126,7 @@ function handleApproachButton() {
 // ==== SETUP
 
 function watchButtons() {
-    //sets up event listeners for content buttons
+    //sets up event listeners for buttons
     handleAnchorButton()
     handlePsychoButton()
     handleBackgroundButton()
@@ -128,6 +134,7 @@ function watchButtons() {
 }
 
 function handlePageFadeOnLoad() {
+    //sets fade in of page on load
     $('body').css('display', 'none').delay(250).fadeIn(750, "swing");
 }
 
@@ -144,8 +151,8 @@ function handleScroll() {
 
 // ==== ON LOAD
 
-$(handleDesktopVideoOnLoad)
 $(handlePageFadeOnLoad)
+$(handleVideoOnLoad)
 $(watchButtons)
-$(handleScroll)
 $(handleQuote(quotes))
+$(handleScroll)

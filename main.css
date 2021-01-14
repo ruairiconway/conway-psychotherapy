@@ -1,3 +1,5 @@
+
+
 /* ==== Typestyles ==== */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200;300;400&display=swap');
@@ -8,19 +10,19 @@ font-family: 'Poppins', sans-serif;
 
 header h1 {
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
   font-size: 1.5em;
   font-weight: 300;
   letter-spacing: 0.2em;
+  color: #FFF;
 }
 
 header h2 {
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
   font-size: 0.8em;
   font-weight: 300;
-  margin: 0;
   line-height: 26px;
+  margin: 0;
+  color: #FFF;
 }
 
 header p {
@@ -30,11 +32,11 @@ header p {
 
 main h3 {
   font-family: 'Poppins', sans-serif;
-  color: #425332;
   font-size: 1.3em;
   font-weight: 300;
   letter-spacing: 0.2em;
   text-align: left;
+  color: #425332;
 }
 
 main p {
@@ -42,38 +44,46 @@ main p {
   color: #000;
 }
 
-.content-p {
-  font-size: 0.8em;
-  word-spacing: 0.2em;
-  letter-spacing: 0.01em;
-  line-height: 1.6em;
-  margin-bottom: 40px;
-  padding: 0 5%;
-}
-
 .contact-container p {
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
   font-size: 0.8em;
   font-weight: 300;
-  margin: 0;
   line-height: 26px;
+  margin: 0;
+  color: #FFF;
 }
 
 .contact-container a {
   text-decoration: none;
 }
 
+.content-p {
+  font-size: 0.8em;
+  line-height: 1.6em;
+  letter-spacing: 0.01em;
+  word-spacing: 0.2em;
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
 footer p {
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
   font-size: 0.8em;
   font-weight: 300;
   line-height: 26px;
+  color: #FFF;
 }
 
 
 /* ==== SVGs ==== */
+
+#scroll-arrow {
+  position: absolute;
+  margin: -12px;
+  left: 50%;
+  bottom: 5%;
+  stroke: #FFF;
+}
 
 .content-icon {
   stroke: #425332;
@@ -112,13 +122,13 @@ body {
 
 #bg-video {
   position: fixed;
-  width: 100%;
   height: auto;
+  width: 100%;
   opacity: 0.5;
   z-index: -2;
 }
 
-.bg-overlay {
+#bg-overlay {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -134,28 +144,20 @@ header {
   display: flex;
   flex-flow: column nowrap;
 
-  margin: 0 5%;
   height: 100vh;
+  margin: 0 5%;
 }
 
 .header-title {
   display: flex;
   align-items: center;
-  
   flex: 4;
 }
 
 .header-subtitle {
-  margin-bottom: 25px;
-  
   flex: 1;
-}
 
-#scroll-arrow {
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  margin: -12px;
+  margin-bottom: 25px;
 }
 
 
@@ -171,10 +173,9 @@ header {
 }
 
 .contact-portrait {
-  max-width: 125px;
   height: auto;
+  max-width: 125px;
   border-radius: 3px;
-
   -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
   box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 }
@@ -184,11 +185,10 @@ header {
 }
 
 .content-container {
-  background-color: #FFF;
-  padding: 50px 0;
   width: 100%;
+  padding: 50px 0;
+  background-color: #FFF;
   border-radius: 3px 0 0 3px;
-
   -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
   box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 }
@@ -198,8 +198,8 @@ header {
   flex-flow: row nowrap;
   align-items: center;
 
-  width: 100%;
   height: 100px;
+  width: 100%;
   padding: 0 5%;
   font-style: normal;
   font-weight: normal;
@@ -210,8 +210,8 @@ header {
 }
 
 .content-button svg {
-  margin-left: auto;
   min-width: 24px;
+  margin-left: auto;
 }
 
 .active {
@@ -227,9 +227,9 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 
-  text-align: center;
   height: 200px;
   padding: 25px 0px;
+  text-align: center;
 }
 
 .social-nav {
@@ -281,9 +281,37 @@ body:not(.user-is-tabbing) textarea:focus {
 
 /* ==== Media Queries ==== */
 
-/* tablet and up */
+/* tablet --- */
+@media screen and (max-width: 1015px) {
+
+  body {
+    background: url('assets/waterfall-static.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #bg-video {
+    display: none;
+  }
+
+}
+
+/* tablet +++ */
 @media screen and (min-width: 769px) {
   
+  header h2 {
+    font-size: 1em;
+  }
+  
+  .content-p {
+    font-size: 0.9em;
+  }
+
+  .contact-container {
+    align-self: start;
+  }
+
   .content-button:hover {
     background-color: #42533233;
   }
@@ -293,46 +321,17 @@ body:not(.user-is-tabbing) textarea:focus {
     border-radius: 3px;
   }
 
-  .content-p {
-    font-size: 0.9em;
-  }
-
-  header h2 {
-    font-size: 1em;
-  }
-
-  .contact-container {
-    align-self: start;
-  }
-
 }
 
-/* mobile + tablet */
-@media screen and (max-width: 1015px) {
-  #bg-video {
-    display: none;
-  }
-  body {
-    background: url('assets/waterfall-static.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-
-/* laptop and up */
+/* Laptop + */
 @media screen and (min-width: 1015px) {
   
   main {
     display: flex;
+
     background-color: #FFF;
     -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
     box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
-  }
-
-  .content-container {
-    -webkit-box-shadow: none; 
-    box-shadow: none
   }
 
   .contact-info {
@@ -343,18 +342,28 @@ body:not(.user-is-tabbing) textarea:focus {
     color: #425332;
   }
 
+  .content-container {
+    -webkit-box-shadow: none; 
+    box-shadow: none
+  }
+
 }
 
-/* Video Formatting */
+/* Video Ratio */
 @media (min-aspect-ratio: 16/9) {
+
   #bg-video {
-      width:100%;
-      height: auto;
+    height: auto;
+    width:100%;
   }
+
 }
+
 @media (max-aspect-ratio: 16/9) {
+
   #bg-video { 
-      width:auto;
-      height: 100%;
+    height: 100%;
+    width:auto;
   }
+
 }
