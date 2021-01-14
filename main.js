@@ -18,6 +18,23 @@ function handleMouseDownOnce() {
 $(window).on('keydown', handleFirstTab)
 
 
+// ==== DESKTOP VIDEO
+
+function displayDesktopVideo() {
+    const videoHtml = `
+    <video autoplay muted loop poster="assets/waterfall-static.png" id="bg-video">
+        <source src="assets/waterfall.mp4" type="video/mp4">
+    </video>`
+    $('body').prepend(videoHtml)
+}
+
+function handleDesktopVideoOnLoad() {
+    if ($(window).width() > 1015) {
+        displayDesktopVideo()
+    }
+}
+
+
 // ==== QUOTE ROTATION
 
 const quotes = [
@@ -59,49 +76,76 @@ function handleQuote(array) {
 }
 
 
+// ==== SCROLL ARROW
+
+function handleAnchorButton() {
+    $('#scroll-arrow').on('click', () => {
+        $('html, body').animate({
+            scrollTop: $('#main').top
+        }, 400);
+    })
+}
+
+
 // ==== CONTENT ACCORDIAN
 
-function psychoButton() {
+function handlePsychoButton() {
     //toggles content on click
     $('#content-psycho > .content-button').on("click", () => {
         $('#psycho-icon').toggleClass('rotate-icon')
         $('#content-psycho > .content-button').toggleClass('active')
-        $('#content-psycho > .content-p').slideToggle(750)
+        $('#content-psycho > .content-p').slideToggle(350)
     })
 }
 
-function backgroundButton() {
+function handleBackgroundButton() {
     //toggles content on click
     $('#content-background > .content-button').on("click", () => {
         $('#background-icon').toggleClass('rotate-icon')
         $('#content-background > .content-button').toggleClass('active')
-        $('#content-background > .content-p').slideToggle(750)
+        $('#content-background > .content-p').slideToggle(350)
     })
 }
 
-function approachButton() {
+function handleApproachButton() {
     //toggles content on click
     $('#content-approach > .content-button').on("click", () => {
         $('#approach-icon').toggleClass('rotate-icon')
         $('#content-approach > .content-button').toggleClass('active')
-        $('#content-approach > .content-p').slideToggle(750)
+        $('#content-approach > .content-p').slideToggle(350)
     })
 }
 
-function watchContentButtons() {
+
+// ==== SETUP
+
+function watchButtons() {
     //sets up event listeners for content buttons
-    psychoButton()
-    backgroundButton()
-    approachButton()
+    handleAnchorButton()
+    handlePsychoButton()
+    handleBackgroundButton()
+    handleApproachButton()
 }
 
 function handlePageFadeOnLoad() {
     $('body').css('display', 'none').delay(250).fadeIn(750, "swing");
 }
 
+function handleScroll() {
+    $(window).scroll( () => {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-arrow').fadeOut(150, "swing")
+        } else {
+            $('#scroll-arrow').fadeIn(150, "swing")
+        }
+    })
+}
+
 
 // ==== ON LOAD
 
+$(handleDesktopVideoOnLoad)
 $(handlePageFadeOnLoad)
+$(watchButtons)
+$(handleScroll)
 $(handleQuote(quotes))
-$(watchContentButtons)
