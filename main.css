@@ -117,6 +117,11 @@ html {
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  /* remove when adding video back in */
+  background: url('assets/waterfall-static.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
@@ -284,12 +289,12 @@ body:not(.user-is-tabbing) textarea:focus {
 /* tablet --- */
 @media screen and (max-width: 1015px) {
 
-  body {
+  /* body {
     background: url('assets/waterfall-static.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+  } */
 
   #bg-video {
     display: none;

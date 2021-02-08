@@ -23,21 +23,21 @@ $(window).on('keydown', handleFirstTab)
 
 // ==== DESKTOP VIDEO
 
-function generateVideoHtml() {
-    // returns video html
-    return `
-    <video autoplay muted loop poster="assets/waterfall-static.png" id="bg-video">
-        <source src="assets/waterfall.mp4" type="video/mp4">
-    </video>`
-}
+// function generateVideoHtml() {
+//     // returns video html
+//     return `
+//     <video autoplay muted loop poster="assets/waterfall-static.png" id="bg-video">
+//         <source src="assets/waterfall.mp4" type="video/mp4">
+//     </video>`
+// }
 
-function handleVideoOnLoad() {
-    // if screen is desktop sized, generate video HTML
-    if ($(window).width() > 1015) {
-        const videoHtml = generateVideoHtml()
-        $('body').prepend(videoHtml)
-    }
-}
+// function handleVideoOnLoad() {
+//     // if screen is desktop sized, generate video HTML
+//     if ($(window).width() > 1015) {
+//         const videoHtml = generateVideoHtml()
+//         $('body').prepend(videoHtml)
+//     }
+// }
 
 
 // ==== QUOTE ROTATION
@@ -152,7 +152,7 @@ function handleScroll() {
 // ==== ON LOAD
 
 $(handlePageFadeOnLoad)
-$(handleVideoOnLoad)
+// $(handleVideoOnLoad)
 $(watchButtons)
 $(handleQuote(quotes))
 $(handleScroll)
