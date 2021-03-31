@@ -39,7 +39,8 @@ main h3 {
   color: #425332;
 }
 
-main p {
+main p,
+main li {
   font-family: 'Open Sans', sans-serif;
   color: #000;
 }
@@ -57,8 +58,15 @@ main p {
   text-decoration: none;
 }
 
-.content-p {
-  font-size: 0.8em;
+.contact-container button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.content-p,
+.content-li {
   line-height: 1.6em;
   letter-spacing: 0.01em;
   word-spacing: 0.2em;
@@ -168,25 +176,89 @@ header {
 
 /* ==== Main ==== */
 
-.contact-container {
+/* .contact-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 
   margin: 75px 5%;
+} */
+
+.contact-container {
+  display: grid;
+  grid-template: 1fr auto / auto 1fr;
+  grid-template-areas:
+    "ct-por ct-inf"
+    "ct-btn ct-btn";
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
 .contact-portrait {
+  grid-area: ct-por;
   height: auto;
-  max-width: 125px;
+  max-width: 175px;
   border-radius: 3px;
   -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2); 
   box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
 }
 
 .contact-info {
-  margin: 10px 0 10px 10px;
+  grid-area: ct-inf;
+  padding: 1rem;
+  align-self: center;
+}
+
+.contact-btn-wrapper {
+  grid-area: ct-btn;
+  width: 90%;
+  margin: auto;
+}
+
+.contact-btn {
+  width: 100%;
+  margin: 50px 0 0;
+  background: #425332;
+  color: #fff;
+  height: 50px;
+  border: none;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 25px 3px rgba(0,0,0,0.2);
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: #FFF;
+  color: #425332;
+}
+
+@media all and (min-width: 769px) {
+
+  .contact-container {
+    padding: 50px;
+  }
+
+  .contact-btn-wrapper {
+    width: 100%;
+  }
+
+}
+
+@media all and (min-width: 1015px) {
+
+  .contact-container {
+    position: sticky;
+    top: 0;
+  }
+
+  .contact-btn:hover,
+  .contact-btn:focus {
+    background: #42533233;
+  }
+
 }
 
 .content-container {
@@ -221,6 +293,21 @@ header {
 
 .active {
   background-color: #4253321A;
+}
+
+.content-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-li {
+  align-self: center;
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
 }
 
 
