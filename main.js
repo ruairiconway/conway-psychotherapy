@@ -56,30 +56,30 @@ function handleAnchorButton() {
 
 // ==== CONTENT ACCORDIAN
 
-function handlePsychoButton() {
+function handleSection1Button() {
     // toggles content on click
-    $('#content-psycho > .content-button').on("click", () => {
-        $('#psycho-icon').toggleClass('rotate-icon')
-        $('#content-psycho > .content-button').toggleClass('active')
-        $('#content-psycho > .content-p').slideToggle(350)
+    $('#content-section-1 > .content-button').on("click", () => {
+        $('#section-1-icon').toggleClass('rotate-icon')
+        $('#content-section-1 > .content-button').toggleClass('active')
+        $('#content-section-1 > .content-p').slideToggle(350)
     })
 }
 
-function handleBackgroundButton() {
+function handleSection2Button() {
     //toggles content on click
-    $('#content-background > .content-button').on("click", () => {
-        $('#background-icon').toggleClass('rotate-icon')
-        $('#content-background > .content-button').toggleClass('active')
-        $('#content-background > .content-p').slideToggle(350)
+    $('#content-section-2 > .content-button').on("click", () => {
+        $('#section-2-icon').toggleClass('rotate-icon')
+        $('#content-section-2 > .content-button').toggleClass('active')
+        $('#content-section-2 > .content-p').slideToggle(350)
     })
 }
 
-function handleApproachButton() {
+function handleSection3Button() {
     //toggles content on click
-    $('#content-approach > .content-button').on("click", () => {
-        $('#approach-icon').toggleClass('rotate-icon')
-        $('#content-approach > .content-button').toggleClass('active')
-        $('#content-approach > .content-p').slideToggle(350)
+    $('#content-section-3 > .content-button').on("click", () => {
+        $('#section-3-icon').toggleClass('rotate-icon')
+        $('#content-section-3 > .content-button').toggleClass('active')
+        $('#content-section-3 > .content-p').slideToggle(350)
     })
 }
 
@@ -89,9 +89,9 @@ function handleApproachButton() {
 function watchButtons() {
     //sets up event listeners for buttons
     handleAnchorButton()
-    handlePsychoButton()
-    handleBackgroundButton()
-    handleApproachButton()
+    handleSection1Button()
+    handleSection2Button()
+    handleSection3Button()
 }
 
 function handlePageFadeOnLoad() {
