@@ -15,12 +15,8 @@
 </head>
 
 <body>
-
-    <!-- Video loads here on Desktop screens -->
-    <div id="bg-overlay"></div>
-        
+    <div id="bg-overlay"></div>  
     <header>
-
         <div class="header-title">
             <h1>Conway Psychotherapy</h1>
         </div>
@@ -37,74 +33,85 @@
                 <path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-
     </header>
-        
-        
-    <main id="main">
 
+    <main id="main">
         <section class="contact-container">
-            <img id="portrait" class="contact-portrait" src='./assets/portrait.jpg' alt="Picture of Teresa Conway">
+            <div id="portrait" class="contact-portrait"></div>
             <div class="contact-info">
                 <p>Teresa Conway</p>
-                <a href="tel:+353877824431"><p>(087) 782-4431</p></a>  
-                <a href="mailto:conway.tvm@gmail.com"><p>conway.tvm@gmail.com</p></a> 
-                <a href="https://www.google.com/maps/place/Howard+Court,+Weir+St,+Cloghmacsimon,+Bandon,+Co.+Cork/@51.7447169,-8.7402503,19z/data=!3m1!4b1!4m5!3m4!1s0x4844f4297b72028d:0x1fa9f5c603f10fb2!8m2!3d51.7447161!4d-8.7397031"><p>9/10 Howard Court</p>
-                <p>Weir Street Bandon</p>
-                <p>Co. Cork P72 KX50</p></a>
+                <a href="tel:+353877824431" class="info-link"><p>(087) 782-4431</p></a>  
+                <a href="mailto:conway.tvm@gmail.com" class="info-link"><p>conway.tvm@gmail.com</p></a> 
+                <a href="https://www.google.com/maps/place/Howard+Court,+Weir+St,+Cloghmacsimon,+Bandon,+Co.+Cork/@51.7447169,-8.7402503,19z/data=!3m1!4b1!4m5!3m4!1s0x4844f4297b72028d:0x1fa9f5c603f10fb2!8m2!3d51.7447161!4d-8.7397031" class="info-link">
+                    <p>9/10 Howard Court</br>
+                    Weir Street Bandon</br>
+                    Co. Cork</p>
+                </a>
             </div>
             <div class="contact-btn-wrapper">
-                <a href="mailto:conway.tvm@gmail.com" class="contact-btn">Get In Touch</a>
+                <a href="mailto:conway.tvm@gmail.com" >
+                    <button class="contact-btn">Get In Touch</button>
+                </a>
             </div>
         </section>
-
         <section class="content-container">
-            <div id="content-psycho">
+            <div id="content-section-1">
                 <button class="content-button">
                     <h3>About Me</h3>
-                    <svg id="psycho-icon" class="content-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="section-1-icon" class="content-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                         <path id="fade-line" d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                     </svg>
                     <span class="sr-only">Read more "About Me"</span>
                 </button>
                 <div class="content-p hidden">
-                    <p>My life experiences have formed the path to me becoming a psychotherapist. Coming from a large family with many challenges, I became interested in the different personalities and behaviours. From an early age I  had a need to understand myself and those around me.  As a Montessori teacher, I was drawn to how children were affected or impacted both by everyday and more traumatic events in their lives. It encouraged me to reflect on my own upbringing and how my past might be entangled in my life as an adult. My interest continued through parenting and the responsibility of being a mother and all that was involved in that role.</p>
-                    <p>Having moved many times in my life to many different countries, it has helped me to understand the human need to feel connected and what it can feel like to be an outsider. My experience in therapy was so rewarding and had such a positive impact on how I live my life, I decided to pursue it as a career to help others.</p>
+                    <p>My life experiences have formed the path to me becoming a psychotherapist. Coming from a large family with many challenges, I became interested in the different personalities and behaviours.</p>
+                    <p>From an early age I had a need to understand myself and those around me. As a Montessori teacher, I was drawn to how children were affected or impacted both by everyday and more traumatic events in their lives. It encouraged me to reflect on my own upbringing and how my past might be entangled in my life as an adult.</p>
+                    <p>My interest continued through parenting and the responsibility of being a mother and all that was involved in that role.</p>
+                    <p>Having moved many times in my life to many different countries, it has helped me to understand the human need to feel connected and what it can feel like to be an outsider. My experience in therapy was so rewarding and had such a positive impact on how I live my life, I decided to pursue as a career to help others.</p>
                     <p>In 2016 I qualified from CIT with a BA (Hons) Degree in Counselling & Psychotherapy. As an accredited member of the IACP I practice under a strict “Code of Ethics”.</p>
+                    <p>Other relevant qualifications which I feel compliment/enhance my practice are:</p>
+                    <ul>
+                        <li>Diploma in “Svastha” Yoga Teaching (Singapore).</li>
+                        <li>Reiki: Level 1 and 2 (Singapore).</li>
+                    </ul>
                     <p>I was a volunteer Counsellor with ARC House for over 2 years and found this work very rewarding.</p>
-                    <p>Since qualifying I have been working on building a private practice and continue to keep my training up to date by attending relevant seminars and workshops. I believe I will always be learning.</p>
+                    <p>Since qualifying I have been working on building a private practice and continue to keep my training up to date by attending relevant seminars and workshops.</p>
                 </div>
             </div>
-            <div id="content-background">
+            <div id="content-section-2">
                 <button class="content-button">
-                    <h3>How Therapy Works</h3>
-                    <svg id="background-icon" class="content-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <h3>Approach</h3>
+                    <svg id="section-2-icon" class="content-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                         <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                     </svg>
                     <span class="sr-only">Read more on "Background"</span>
                 </button>
                 <div class="content-p hidden">
-                    <p>People come to therapy for all sorts of reasons. We all go through times when we feel the need for some extra support or help, dealing with issues that are causing us stress or worry. Making the initial contact can be the hardest part, talking to a stranger about what is concerning you is not easy. With that in mind my aim is to make the space as safe and supportive as I can.</p>
-                    <p>Counselling involves looking at what is not working for you and exploring how this might be changed using different strategies, helping you to regain a feeling of control over the issue rather than the other way around.</p>
-                    <p>Psychotherapy delves a bit deeper into understanding why we respond the way we do to certain triggers. Some childhood experiences can leave lasting effects on us resulting in ways of interacting/being that are not helpful to us as adults.</p>
-                    <p>When we are not given the space/protection in childhood to become or appreciate our true selves, aspects of us end up hidden or hinder our growth. Psychotherapy helps us unravel the past and live in a more present, freer way.</p>
+                    <p>People come to therapy for all sorts of reasons.</p>
+                    <p>We all  go through times when we feel the need for some extra support or help, dealing with issues that are causing us stress or worry. Making the initial contact can be the hardest part, talking to a stranger about what is concerning you is not easy.</p>
+                    <p>With that in mind my aim is to make the space as safe and supportive as I can.</p>
+                    <p>Counselling involves looking at what is not working for you and exploring how this might be changed using different strategies, helping you to regain a feeling of control over the issues rather than the other way around.</p>
+                    <p>Psychotherapy delves a bit deeper into understanding why we respond the way we do to certain triggers. Some childhood experiences or traumatic events can leave lasting effects on us resulting in ways of interacting/being that are not helpful to us.</p>
+                    <p>When we are not given the space/protection in childhood to become or appreciate our true selves, aspects of us can end up hidden or hinder our personal growth. Psychotherapy helps us unravel the past and live in a more present freer way.</p>
+                    <p>As an Integrative Humanistic Therapist, I draw on a number of methodologies in my work with clients, including Gestalt, Transactional Analysis, Person Centred, Cognitive Behavioural Therapy (CBT) and Internal Family Systems. I believe attachment can be a very helpful lens through which to gain understanding of ourselves. Mindfulness is an important tool for developing self awareness and promoting regulation.</p>
                 </div>
             </div>
-            <div id="content-approach">
+            <div id="content-section-3">
                 <button class="content-button active">
-                    <h3>How I Can Help</h3>
-                    <svg id="approach-icon" class="content-icon rotate-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <h3>How It Works</h3>
+                    <svg id="section-3-icon" class="content-icon rotate-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 5V19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                         <path d="M5 12H19" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:darken"/>
                     </svg>
                     <span class="sr-only">Read more on "Approach"</span>
                 </button>
                 <div class="content-p">
-                    <p>When we are not given the space/protection in childhood to become or appreciate our true selves, aspects of us end up hidden or hinder our growth. Psychotherapy helps us unravel the past and live in a more present freer way.</p>
+                    <p>Every client has different goals for therapy, this can be decided on collaboratively.  At all times I do my utmost to work within the boundaries as set out by the client.</p>
                     <p>Sessions last one hour and are usually weekly/fortnightly, this can vary depending on the clients individual needs.</p>
-                    <p>My fee is €60 euro (Paypal/Revolut).</p>
+                    <p>My fee is €60.00 per hour (accepting Paypal/Revolut).</p>
+                    <p>Currently, under covid-19 restrictions, sessions are online via Zoom or FaceTime.</p>
                     <ul class="content-ul">
                         <li class="content-li">Abuse</li>
                         <li class="content-li">Adoption</li>
@@ -128,17 +135,14 @@
                 </div>
             </div>
         </section>
-
     </main>
-        
-    <footer>
 
+    <footer>
         <div>
             <p>Counsellor and Psychotherapist</p>
             <p>BA (Hons) Counselling and Psychotherapy, CIT</p>
             <p>Accredited Member, IACP</p>
         </div>
-
         <div class="social-nav">
             <!-- Facebook -->
             <a href="https://www.facebook.com/CPsycotherapy" class="social-button" target="_blank">
@@ -165,7 +169,6 @@
                 <span class="sr-only">Click to view LinkedIn page</span>
             </a>
         </div>
-
     </footer>
             
     <!-- scripts -->
