@@ -1,45 +1,6 @@
 'use strict'
 
 
-// ==== ACCESSIBILITY
-
-function handleFirstTab(e) {
-    // adds class .user-is-tabbing to body if tab key hit
-    if (e.keyCode === 9) {
-        $('body').addClass('user-is-tabbing')
-        $(window).off('keydown', handleFirstTab).on('mousedown', handleMouseDownOnce)
-    }
-}
-  
-function handleMouseDownOnce() {
-    // removes class .user-is-tabbing from body on screen click
-    $('body').removeClass('user-is-tabbing')
-    $(window).off('mousedown', handleMouseDownOnce).on('keydown', handleFirstTab)
-}
-
-// calls handleFirstTab() on keydown
-$(window).on('keydown', handleFirstTab)
-
-
-// ==== DESKTOP VIDEO
-
-// function generateVideoHtml() {
-//     // returns video html
-//     return `
-//     <video autoplay muted loop poster="assets/waterfall-static.png" id="bg-video">
-//         <source src="assets/waterfall.mp4" type="video/mp4">
-//     </video>`
-// }
-
-// function handleVideoOnLoad() {
-//     // if screen is desktop sized, generate video HTML
-//     if ($(window).width() > 1015) {
-//         const videoHtml = generateVideoHtml()
-//         $('body').prepend(videoHtml)
-//     }
-// }
-
-
 // ==== QUOTE ROTATION
 
 const quotes = [
@@ -73,7 +34,7 @@ function updateQuote(array) {
 
 function handleQuote(array) {
     // Looped, quote fades out for text change, then fades in again
-    setInterval(() => {
+    const quoteRotation = setInterval(() => {
         $(`.js-quote`)
             .fadeOut(750, function() {updateQuote(array)} )
             .fadeIn(750)
