@@ -17,5 +17,5 @@ Simple brochure website for Teresa Conway, an established Counsellor and Psychot
 - Sticky contact component on scroll.
 
 ## to-do's
-- Optimize image load + load order
-- Check for cross-browser tweaks (safari, chrome, firefox)
+- Optimize background image load.
+- Check for cross-browser tweaks (safari, chrome, firefox).
